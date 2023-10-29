@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 
 import './globals.css'
+
 import { ThemeProvider } from './context/useTheme'
+
+import Sidebar from "@/app/components/Sidebar"
 
 export const metadata: Metadata = {
   title: 'Dashboard with NextJS',
@@ -17,7 +20,11 @@ export default function RootLayout({
     <html lang="pt-br">
       <ThemeProvider initialTheme='light'>
         <head />
-        <body>{children}</body>
+        <body>
+          <Sidebar>
+            {children}
+          </Sidebar>
+        </body>
       </ThemeProvider>
     </html>
   )
