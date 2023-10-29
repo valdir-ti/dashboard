@@ -5,7 +5,7 @@ import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { FiSettings } from 'react-icons/fi'
 
 type SidebarProps = {
-    children: any
+    children: React.ReactNode
 }
 
 const Sidebar = ({children}) => {
