@@ -18,8 +18,6 @@ export default function Home() {
       <button onClick={() => setTheme("dark")}>Dark</button>
       <br />
       <button onClick={() => setTheme("light")}>Light</button>
-      <br />
-      <button onClick={() => setTheme("system")}>System</button>
     </main>
   )
 }
