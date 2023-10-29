@@ -8,7 +8,7 @@ type SidebarProps = {
     children: React.ReactNode
 }
 
-const Sidebar = ({children}) => {
+const Sidebar = ({children}: SidebarProps) => {
     return (
         <div className="flex">
             <div 
