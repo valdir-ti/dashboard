@@ -1,14 +1,29 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { FiSettings } from 'react-icons/fi'
 
+import useTheme from "@/app/context/useTheme"
+
 type SidebarProps = {
     children: React.ReactNode
 }
 
-const Sidebar = ({children}: SidebarProps) => {
+const Sidebar = ({ children }: SidebarProps) => {
+
+    const handleTheme = () => {
+        if(theme === 'light') {
+            setTheme('dark')
+        } else {
+            setTheme('light')
+        }
+    }
+
+    const { theme, setTheme } = useTheme()
+
     return (
         <div className="flex">
             <div 
@@ -41,6 +56,12 @@ const Sidebar = ({children}: SidebarProps) => {
                             <FiSettings />
                         </div>
                     </Link>
+                    <button 
+                        onClick={handleTheme}
+                        className="bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block"
+                    >
+                        {theme}
+                    </button>
                 </div>
             </div>
             <main className="ml-20 w-full">{children}</main>
