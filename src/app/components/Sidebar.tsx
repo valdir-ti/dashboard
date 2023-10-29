@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { FiSettings } from 'react-icons/fi'
+import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 
 import useTheme from "@/app/context/useTheme"
 
@@ -60,7 +61,7 @@ const Sidebar = ({ children }: SidebarProps) => {
                         onClick={handleTheme}
                         className="bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block"
                     >
-                        {theme}
+                        {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
                     </button>
                 </div>
             </div>
