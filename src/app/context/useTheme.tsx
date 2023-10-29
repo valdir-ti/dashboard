@@ -2,7 +2,7 @@
 
 import { PropsWithChildren, createContext, useContext, useState } from 'react'
 
-type Themes = "dark" | "light" | "system"
+type Themes = "dark" | "light"
 type ThemeState = {
     theme: Themes
     setTheme(theme: Themes): void
