@@ -7,7 +7,7 @@ import {
     BarElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
 } from "chart.js"
 
 ChartJS.register(
@@ -19,34 +19,35 @@ ChartJS.register(
     Legend
 )
 
-const BarChart = () => {
+type chartDatasetProps = [{
+    label: string
+    data: number[]
+    borderColor: string
+    backgroundColor: string
+    borderWidth: number
+}]
 
-    const [chartData, setChartData] = useState({
+const labels = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
+
+const BarChart: React.FC<{}> = () => {
+
+    const [chartData, setChartData] = useState<any>({
         datasets: []
     })
     const [chartOptions, setChartOptions] = useState({})
 
-    const chartDatasets: 
-        { 
-            label: string
-            data: number[]
-            borderColor: string
-            backgroundColor: string
-            borderWidth: number
-        } = { 
-            label: "Vendas", 
-            data: [18127, 22201, 19490, 24182, 17842, 22475, 22121], 
-            borderColor: "rgb(53, 162, 235)", 
-            backgroundColor: "rgb(53, 162, 235, 0.4)",
-            borderWidth: 0.5
-        }
+    const chartDatasets = [{
+        label: "Vendas", 
+        data: [18127, 22201, 19490, 24182, 17842, 22475, 22121], 
+        borderColor: "rgb(53, 162, 235)", 
+        backgroundColor: "rgb(53, 162, 235, 0.4)",
+        borderWidth: 0.5
+    }] as chartDatasetProps
 
     useEffect(() => {
         setChartData({
-            labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
-            datasets: [
-                chartDatasets || null
-            ],
+            labels: labels,
+            datasets: chartDatasets,
         })
         setChartOptions({
             plugins: {
