@@ -1,11 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx'
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { FiSettings } from 'react-icons/fi'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
+import { BiLogOut } from 'react-icons/bi'
 
 import useTheme from "@/app/context/useTheme"
 
@@ -63,6 +63,11 @@ const Sidebar = ({ children }: SidebarProps) => {
                     >
                         {theme === 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
                     </button>
+                    <Link href="/logout">
+                        <div className="bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
+                            <BiLogOut />
+                        </div>
+                    </Link>
                 </div>
             </div>
             <main className="ml-20 w-full">{children}</main>
