@@ -32,18 +32,20 @@ const BarChart = () => {
             data: number[]
             borderColor: string
             backgroundColor: string
+            borderWidth: number
         } = { 
             label: "Vendas", 
             data: [18127, 22201, 19490, 24182, 17842, 22475, 22121], 
             borderColor: "rgb(53, 162, 235)", 
-            backgroundColor: "rgb(53, 162, 235, 0.4)" 
+            backgroundColor: "rgb(53, 162, 235, 0.4)",
+            borderWidth: 0.5
         }
 
     useEffect(() => {
         setChartData({
             labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
             datasets: [
-                chartDatasets
+                chartDatasets || null
             ],
         })
         setChartOptions({
