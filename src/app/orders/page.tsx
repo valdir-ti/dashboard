@@ -9,11 +9,11 @@ import { data } from '../../../data/data.js'
 
 const Orders = () => {
     return (
-        <main className="bg-gray-50 min-h-screen">
+        <main className="bg-gray-50 min-h-screen dark:bg-[#171c2f]">
             <Header />
             <div className='p-4'>
-                <h2 className='mb-4'>Orders</h2>
-                <div className='w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto'>
+                <h2 className='mb-4 dark:text-white'>Orders</h2>
+                <div className='w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto dark:bg-[#171c2f]'>
                     <div className='my-3 p-2 grid md:grid-cols-4 scroll-m-3 grid-cols-2 items-center justify-between cursor-pointer'>
                         <span className='mb-4'>Order</span>
                         <span className='sm:text-left text-right'>Status</span>
@@ -24,15 +24,15 @@ const Orders = () => {
                         {data.map((order, id) => (
                             <li 
                                 key={id}
-                                className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
+                                className='bg-gray-50 dark:bg-[#6F8CE2] hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'
                             >
                                 <div className='flex items-center'>
-                                    <div className='bg-purple-100 p-3 rounded-lg'>
-                                        <FaShoppingBag className='text-purple-800'/>
+                                    <div className='bg-purple-100 dark:bg-purple-500 p-3 rounded-lg'>
+                                        <FaShoppingBag className='text-purple-800 dark:text-white'/>
                                     </div>
                                     <div className='pl-4'>
-                                        <p className='text-gray-800 font-bold'>R${order.total.toLocaleString()}</p>
-                                        <p className='text-gray-800 font-sm'>{order.name.first}</p>
+                                        <p className='text-gray-800 dark:text-white font-bold'>R${order.total.toLocaleString()}</p>
+                                        <p className='text-gray-800 dark:text-white font-sm'>{order.name.first}</p>
                                     </div>                                    
                                 </div>
                                 <p className='text-gray-800 sm:text-left text-right'>

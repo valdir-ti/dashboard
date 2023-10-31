@@ -37,7 +37,7 @@ const BarChart: React.FC<{}> = () => {
     
     const backgroundColor = useMemo(() => {
         return {
-            light: '#eeeccc',
+            light: '#6F8CE2',
             dark: '#6F8CE2'
         }
     }, [])
