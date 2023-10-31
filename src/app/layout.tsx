@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import './globals.css'
 
-import { ThemeProvider } from './context/useTheme'
+import { ThemeProvider } from "@/app/theme-provider";
 
 import Sidebar from "@/app/components/Sidebar"
 
@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (    
-    <html lang="pt-br">
-      <ThemeProvider initialTheme='light'>
-        <head />
+    <html lang="pt-br" suppressHydrationWarning>
+      <head />
+      <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
         <body>
           <Sidebar>
             {children}
