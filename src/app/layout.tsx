@@ -19,13 +19,13 @@ export default function RootLayout({
   return (    
     <html lang="pt-br" suppressHydrationWarning>
       <head />
-      <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
         <body>
-          <Sidebar>
-            {children}
-          </Sidebar>
+          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+              <Sidebar>
+                {children}
+              </Sidebar>
+          </ThemeProvider>
         </body>
-      </ThemeProvider>
     </html>
   )
 }
