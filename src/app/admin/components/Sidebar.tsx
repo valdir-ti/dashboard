@@ -7,11 +7,14 @@ import { FiSettings } from 'react-icons/fi'
 import { BiLogOut } from 'react-icons/bi'
 import { ThemeSwitcher } from './ThemeSwitcher'
 
+import { signOut } from 'next-auth/react'
+
 type SidebarProps = {
   children: React.ReactNode
 }
 
 const Sidebar = ({ children }: SidebarProps) => {
+
   return (
     <div className="flex">
       <div className="fixed w-20 h-screen p-4 bg-white dark:bg-[#171C2F] border-r-[1px] flex flex-col justify-between">
@@ -45,16 +48,18 @@ const Sidebar = ({ children }: SidebarProps) => {
           <div className="pl-6">
             <ThemeSwitcher />
           </div>
-          <Link href="/admin/logout">
-            <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
+          <button 
+            className='className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block"'
+            onClick={() => signOut()}
+          >
               <BiLogOut className="dark:text-white" />
-            </div>
-          </Link>
+          </button>
         </div>
       </div>
       <main className="ml-20 w-full">{children}</main>
     </div>
   )
+  
 }
 
 export default Sidebar
