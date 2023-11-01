@@ -1,6 +1,6 @@
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 
-import { data } from '../../../data/data.js'
+import { data } from '../../../../data/data.js'
 
 const RecentOrders = () => {
   return (
