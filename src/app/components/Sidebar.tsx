@@ -8,56 +8,53 @@ import { BiLogOut } from 'react-icons/bi'
 import { ThemeSwitcher } from './ThemeSwitcher'
 
 type SidebarProps = {
-    children: React.ReactNode
+  children: React.ReactNode
 }
 
 const Sidebar = ({ children }: SidebarProps) => {
-
-    return (
-        <div className="flex">
-            <div 
-                className="fixed w-20 h-screen p-4 bg-white dark:bg-[#171C2F] border-r-[1px] flex flex-col justify-between"
-            >
-                <div className="flex flex-col items-center">
-                    <Link href="/">
-                        <div className="bg-[#6F8CE2] text-white p-3 rounded-lg inline-block">
-                            <RxSketchLogo className='dark:text-white' />
-                        </div>
-                    </Link>
-                    <span className="border-b-[1px] border-gray-200 w-full p-2"></span>
-                    <Link href="/">
-                        <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
-                            <RxDashboard className='dark:text-white'/>
-                        </div>
-                    </Link>
-                    <Link href="/customers">
-                        <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
-                            <RxPerson className='dark:text-white'/>
-                        </div>
-                    </Link>
-                    <Link href="/orders">
-                        <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
-                            <HiOutlineShoppingBag className='dark:text-white'/>
-                        </div>
-                    </Link>
-                    <Link href="/">
-                        <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
-                            <FiSettings className='dark:white' />
-                        </div>
-                    </Link>
-                    <div className='pl-6'>
-                        <ThemeSwitcher />
-                    </div>
-                    <Link href="/logout">
-                        <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
-                            <BiLogOut className='dark:text-white'/>
-                        </div>
-                    </Link>
-                </div>
+  return (
+    <div className="flex">
+      <div className="fixed w-20 h-screen p-4 bg-white dark:bg-[#171C2F] border-r-[1px] flex flex-col justify-between">
+        <div className="flex flex-col items-center">
+          <Link href="/">
+            <div className="bg-[#6F8CE2] text-white p-3 rounded-lg inline-block">
+              <RxSketchLogo className="dark:text-white" />
             </div>
-            <main className="ml-20 w-full">{children}</main>
+          </Link>
+          <span className="border-b-[1px] border-gray-200 w-full p-2"></span>
+          <Link href="/">
+            <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
+              <RxDashboard className="dark:text-white" />
+            </div>
+          </Link>
+          <Link href="/customers">
+            <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
+              <RxPerson className="dark:text-white" />
+            </div>
+          </Link>
+          <Link href="/orders">
+            <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
+              <HiOutlineShoppingBag className="dark:text-white" />
+            </div>
+          </Link>
+          <Link href="/">
+            <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
+              <FiSettings className="dark:white" />
+            </div>
+          </Link>
+          <div className="pl-6">
+            <ThemeSwitcher />
+          </div>
+          <Link href="/logout">
+            <div className="bg-gray-100 dark:bg-[#6F8CE2] hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block">
+              <BiLogOut className="dark:text-white" />
+            </div>
+          </Link>
         </div>
-    )
+      </div>
+      <main className="ml-20 w-full">{children}</main>
+    </div>
+  )
 }
 
 export default Sidebar
