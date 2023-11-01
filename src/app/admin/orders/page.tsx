@@ -3,9 +3,9 @@
 import { FaShoppingBag } from 'react-icons/fa'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 
-import Header from '@/app/components/Header'
+import Header from '@/app/admin/components/Header'
 
-import { data } from '../../../data/data.js'
+import { data } from '../../../../data/data.js'
 
 const Orders = () => {
   return (
