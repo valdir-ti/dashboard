@@ -1,9 +1,9 @@
 'use client'
 
-import Header from '@/app/components/Header'
-import TopCards from '@/app/components/TopCards'
-import BarChart from '@/app/components/BarChart'
-import RecentOrders from '@/app/components/RecentOrders'
+import Header from '@/app/admin/components/Header'
+import TopCards from '@/app/admin/components/TopCards'
+import BarChart from '@/app/admin/components/BarChart'
+import RecentOrders from '@/app/admin/components/RecentOrders'
 
 export default function Home() {
   return (

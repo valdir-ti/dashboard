@@ -1,4 +1,4 @@
-import { ThemeSwitcher } from '@/app/components/ThemeSwitcher'
+import { ThemeSwitcher } from '@/app/admin/components/ThemeSwitcher'
 
 const Header = () => {
   return (

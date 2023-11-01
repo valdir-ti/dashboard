@@ -1,9 +1,9 @@
 'use client'
 
 import { BsPersonFill, BsThreeDotsVertical } from 'react-icons/bs'
-import Header from '@/app/components/Header'
+import Header from '@/app/admin/components/Header'
 
-import { data } from '../../../data/data.js'
+import { data } from '../../../../data/data.js'
 
 const Customers = () => {
   return (
